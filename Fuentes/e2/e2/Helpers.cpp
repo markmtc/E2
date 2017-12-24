@@ -5,6 +5,15 @@
 #include <iostream>
 #include <iomanip>
 
+
+inline uint32_t Helpers::to_bigendian(uint32_t num)
+{
+	return ((num >> 24) & 0xff) | // move byte 3 to byte 0
+		((num << 8) & 0xff0000) | // move byte 1 to byte 2
+		((num >> 8) & 0xff00) | // move byte 2 to byte 1
+		((num << 24) & 0xff000000);
+}
+
 void Helpers::ProcesaColores(int Colores[NUMCOLORES][NUMCOLORES+1], list<Ficha*> *lista)
 {
 	iniciaColores(Colores);

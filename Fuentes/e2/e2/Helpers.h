@@ -21,6 +21,7 @@ class Helpers
 public:
 	static void imprimeColores(int Colores[NUMCOLORES][NUMCOLORES+1]);
 	static void CopiaColores(int Colores[NUMCOLORES][NUMCOLORES + 1], int Destino[NUMCOLORES][NUMCOLORES + 1]);
+	uint32_t to_bigendian(uint32_t num);
 	static void ProcesaColores(int Colores[NUMCOLORES][NUMCOLORES+1], list<Ficha*> *lista);
 	static void iniciaColores(int Colores[NUMCOLORES][NUMCOLORES+1]);
     
